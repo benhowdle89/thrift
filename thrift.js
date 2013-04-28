@@ -10,7 +10,7 @@ if (Meteor.isClient) {
     },
     '/i/:id': function(id) {
       Session.set('id', id);
-      return 'item';
+      return 'single';
     },
     '*': '404'
   });
@@ -94,10 +94,10 @@ if (Meteor.isClient) {
   });
 
   Template.item.events({
-    'click .delete': function(){
+    'click .delete': function() {
       Items.remove({
         _id: this._id
-      }, function(){
+      }, function() {
         Meteor.Router.to('/');
       });
     }
@@ -162,6 +162,9 @@ if (Meteor.isClient) {
   Template.item.rendered = function() {
     dsq();
     gaq();
+    setTimeout(function() {
+      $('#loader').fadeOut();
+    }, 750);
   };
 
   Template.item.items = function() {
@@ -170,7 +173,7 @@ if (Meteor.isClient) {
     }, {});
   };
 
-  Template.item.author = function(){
+  Template.item.author = function() {
     return (Meteor.user() && Meteor.user()._id) == this.userId;
   };
 

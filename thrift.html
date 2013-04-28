@@ -38,6 +38,11 @@
 	{{> items}}
 </template>
 
+<template name="single">
+	<img id="loader" src="/images/377.gif">
+	{{> item}}
+</template>
+
 <template name="intro">
 	<div class="intro">
 		<p><span>GitHub repo/idea thrift store for the open web.</span> Lost passion for a project? Submit the GitHub repo URL. Have an idea that you'd think the community can build? Suggest it!</p>
@@ -85,7 +90,7 @@
 
 <template name="item">
 	{{#each items}}
-		<div class="entry">
+		<div class="entry single">
 			<h2>{{title}}</h2>
 			<p class="entryDesc">{{description}}</p>
 			{{#if gitHubURL}}
