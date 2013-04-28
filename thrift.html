@@ -34,12 +34,10 @@
 </template>
 
 <template name="home">
-	<img id="loader" src="/images/377.gif">
 	{{> items}}
 </template>
 
 <template name="single">
-	<img id="loader" src="/images/377.gif">
 	{{> item}}
 </template>
 
@@ -55,14 +53,16 @@
 
 <template name="header">
 <header>
-	<div class="notification"></div>
-	<h1>Thrift</h1>
-	<input id="search" placeholder="Search for a repo or an idea..." />
-	<div class="menu">
-		{{#if currentUser}}
-			{{> submit}}
-		{{/if}}
-		{{loginButtons}}
+	<div class="innerWrap">
+		<div class="notification"></div>
+		<h1>Thrift</h1>
+		<input id="search" placeholder="Search for a repo or an idea..." />
+		<div class="menu">
+			{{#if currentUser}}
+				{{> submit}}
+			{{/if}}
+			{{loginButtons}}
+		</div>
 	</div>
 </header>
 {{> intro}}
@@ -70,7 +70,7 @@
 
 <template name="search">
 	{{#each results}}
-		<div class="entryk">
+		<div class="entry">
 			<h2 data-id="{{_id}}" class="permalink{{#if gitHubURL}} github-existing {{/if}}">{{title}}</h2>
 		</div>
 	{{/each}}
@@ -90,15 +90,16 @@
 
 <template name="item">
 	{{#each items}}
-		<div class="entry single">
+		<div class="single">
 			<h2>{{title}}</h2>
 			<p class="entryDesc">{{description}}</p>
+			<p class="meta">{{name}}<p>
 			{{#if gitHubURL}}
-				<a href="{{gitHubURL}}">Fork repo</a>
+				<button><a href="{{gitHubURL}}">Fork repo</a></button>
 			{{else}}
-				<a href="https://github.com/new">Create new GitHub repo</a>
+				<button><a href="https://github.com/new">Create new GitHub repo</a></button>
 			{{/if}}
-			<h3> From: {{name}}<h3>
+			
 			<button><a href="https://twitter.com/intent/tweet?text=This idea needs a new home&url=http://thrift.im/i/{{_id}}">Tweet</a></button>
 			{{#if author}}
 				<button class="delete">Delete?</button>

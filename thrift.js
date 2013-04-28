@@ -153,18 +153,12 @@ if (Meteor.isClient) {
   };
 
   Template.items.rendered = function() {
-    setTimeout(function() {
-      $('#loader').fadeOut();
-    }, 750);
     gaq();
   };
 
   Template.item.rendered = function() {
     dsq();
     gaq();
-    setTimeout(function() {
-      $('#loader').fadeOut();
-    }, 750);
   };
 
   Template.item.items = function() {
