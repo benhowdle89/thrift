@@ -352,3 +352,7 @@ a{
 .entryDesc {
 
 }
+
+button a {
+  text-decoration: none;
+}
