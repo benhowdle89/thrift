@@ -1,0 +1,263 @@
+#login-buttons-image-github{
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wJGBYxHYxl31wAAAHpSURBVDjLpZI/aFNRFMZ/973bJqGRPopV4qNq/+SpTYnWRhCKilShg9BGcHOM+GfQoZuLk4iLgw4qZNBaHLuIdBNHl7Ta1qdNFI3SihnaNG1MpH3vuiQYQnwZvHCG893zffc751z4z6PX5T5gA1DAKnAaOAQEgAfAVeCpl+CeCrlRuEC6maO4h0A1wl4tPAHMqNUthvrDdHYY7A3t4rDVjeO6rBU2FaABM1WCrBNoi48Mi+nH9yj+KtPibAKwJXfQ5vcRG7soUnYmWEuQgAEIYBv4cGpoILI0Z4tyYYPegS6UguyijZQ6J45GSNmZHzUcJYD2ii2Ajv7efZ8WZ6ZwXFj79hXpayW4O0SL1Nl/8jzZlZ9dQLFS70pgvZKIyGD0yvu5eRmMnrk1PjI81ir1qBACTdPevXj95mVuNX8XKDQc/+T334bZZ104cvzYw2s3J3qAL5WXSsDbf61NNMBu+wOBs+VSyQ84Nfhg028ZGx3/qyy0lC7lgi7lghBitoon03lvB8l0/k7Wnk+8mny0cyXzEcfZxgwfZPTyRMHsOzAFXE9YhtNQIJnOx4FpJXT1eSkn2g0frqMoFrfoCXcqlCOAGwnLuO/l4JymcWl5uRxzXUKghBAiZ5r+WaV4lrCM555zqO+x2d0ftGmpiA/0k70AAAAASUVORK5CYII=)}
+  body{
+    display:block;
+    font-family:'Open Sans',sans-serif;
+    background:#f0f4f7;
+    padding:0;
+    margin:0 auto;
+    line-height:2.5em;
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    border:0;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box
+  }
+
+  html,body{
+    height:100%
+  }
+
+  header{
+    position:
+    fixed;
+    top:0;
+    width:100%;
+    background:#33373d;
+    height:90px;
+    overflow:hidden;
+    line-height:90px
+  }
+
+  .wrap{
+    width: 600px;
+    margin:20px auto;
+    padding-top:120px;
+  }
+
+  h1{
+    color:#dce5f0;
+    font-weight:400;
+    letter-spacing:0px;
+    font-size:24px;
+    padding-left:24px;
+    float:left;
+    margin-left:40px;
+    cursor: pointer;
+  }
+
+  .permalink {
+    cursor: pointer;
+  }
+
+  #search {
+    margin-left: 24px;
+  }
+
+  input,textarea,button,.login-button,.submitTrigger{
+    border:0;
+    border-radius:3px;
+    padding:10px 20px;
+    background:#55595e;
+    cursor:pointer;
+    color:#dce5f0
+  }
+
+  input,textarea{
+    border-radius:3px;
+    width:230px;
+    cursor:text
+  }
+
+  button{
+    cursor:pointer
+  }
+
+  .login-button.single-login-button{
+    display:inline-block;
+    line-height:1.5em
+  }
+
+  .intro {
+   width: 100%;
+   position: fixed;
+   top: 90px;
+/*   height: 45px;
+   line-height: 45px;*/
+   background: #9ea5ae;
+   padding: 0 12px;
+   text-align: center;
+  }
+
+  .intro p {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .intro p span {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  textarea{
+    resize:none;
+    height:150px
+  }
+
+  input:focus,textarea:focus{
+    box-shadow:none;
+    border:0;
+    outline:0
+  }
+
+  .menu{
+    float:right;
+    padding-right:24px;
+    width:275px
+  }
+
+  .submitTrigger{
+    margin-right:12px;
+    float:left;
+    top:30px;
+    position:relative;
+    font-size:16px;
+    right:-55px
+  }
+
+  .submitForm{
+    display:none;
+    position:absolute;
+    height: 350px;
+    width: 275px;
+    margin-left: -138px;
+    margin-top: -175px;
+    left: 50%;
+    top: 50%;
+    background:#33373d;
+    padding:24px;
+    border-radius:3px;
+    z-index: 10;
+    box-shadow: 0 0 0 100000px rgba(0,0,0,.7);
+  }
+
+  #disqus_thread {
+    margin-top: 24px;
+  }
+
+  #submit{
+    display:block;
+    margin-top: 24px;
+    float: left;
+  }
+
+  #cancel {
+    float: right;
+    margin-top: 24px;
+  }
+
+  .content{
+    width:600px;
+    padding-bottom:200px;
+    margin:20px auto 0 auto;
+  }
+
+  .entry{
+    padding:30px 0;
+    margin-top:20px;
+    border-bottom:2px solid #33373d
+
+  }
+  h2{
+    color:#46c8f3;
+    font-weight:400;
+    margin-top:20px
+  }
+
+  p{
+    margin-left:40px;
+    font-weight:300px;
+    font-family:'Merriweather',serif;
+    color:#33373d
+  }
+
+  h3,h4{
+    font-weight:400;
+    color:#33373d;
+  }
+
+  h3, h4{
+    text-align:left
+  }
+
+  h4{
+    font-size: .8em;
+  }
+
+  h5{
+    font-weight:300;
+    text-align:center
+  }
+
+  a{
+    color: inherit;
+    text-decoration: underline;
+  }
+  a:hover{
+    color:#46c8f3;
+  }
+
+  footer{
+    text-align:center;
+    padding-bottom: 24px;
+  }
+
+  #login-buttons-logout{
+    position:absolute;
+    top:30px;
+    right:10px;
+    height:38px;
+    padding:10px 20px;
+    line-height:18px
+  }
+
+  .login-display-name{
+    display:none
+  }
+
+  .notification{
+    position:absolute;
+    width:500px;
+    height:45px;
+    left:50%;
+    margin-left:-250px;
+    background-color:#dce5f0;
+    color:#33373d;
+    line-height:45px;
+    text-align:center;
+    display:none
+  }
+
+  #loader {
+    display: block;
+    margin: 30px auto 20px auto;
+  }
+
+
+ /*@media only screen and (max-width : 460px){
+
+  .wrap .content{
+    width:300px;
+    margin:20px auto 0 auto;
+  }
+
+  body{
+    text-align: left;
+    background: #ccc;
+  }
+}
+*/

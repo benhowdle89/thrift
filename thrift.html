@@ -1,0 +1,94 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:400,300,700">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800">
+</head>
+<body>
+{{> header}}
+<div class="wrap">
+	<div class="content">
+		{{renderPage}}
+	</div>
+</div>
+<footer>
+	<h5>Brought to you by <a href="http://twitter.com/benhowdle">Ben Howdle</a> &amp; <a href="http://twitter.com/ryanamurphy">Ryan Murphy</a></h5>
+	<p>We are not responsible for any copyright disputes that may occur as a result of submitting ideas/GitHub repo URLs.</p>
+</footer>
+
+{{#if currentUser}}
+	{{> submitForm}}
+{{/if}}
+</body>
+
+<template name="submitForm">
+	<div class="submitForm">
+		<input id="newTitle" placeholder="Title..." />
+		<textarea id="newDescription" placeholder="Idea/GitHub repo description"></textarea>
+		<input id="newGitHubURL" placeholder="GitHub repo URL (optional)" /> 
+		<button id="submit">Add</button>
+		<button id="cancel">Cancel</button>
+	</div>
+</template>
+
+<template name="home">
+	<img id="loader" src="/images/377.gif">
+	{{> items}}
+</template>
+
+<template name="intro">
+	<div class="intro">
+		<p><span>GitHub repo/idea thrift store for the open web.</span> Lost passion for a project? Submit the GitHub repo URL. Have an idea that you'd think the community can build? Suggest it!</p>
+	</div>
+</template>
+
+<template name="header">
+<header>
+	<div class="notification"></div>
+	<h1>Thrift</h1>
+	<input id="search" placeholder="Search..." />
+	<div class="menu">
+		{{#if currentUser}}
+			{{> submit}}
+		{{/if}}
+		{{loginButtons}}
+	</div>
+</header>
+{{> intro}}
+</template>
+
+<template name="search">
+	{{#each results}}
+		<div class="entryk">
+			<h2 data-id="{{_id}}" class="permalink{{#if gitHubURL}} github-existing {{/if}}">{{title}}</h2>
+		</div>
+	{{/each}}
+</template>
+
+<template name="submit">
+	<button class="submitTrigger">Submit</button>
+</template>
+
+<template name="items">
+	{{#each items}}
+		<div class="entry">
+			<h2 class="permalink{{#if gitHubURL}} github-existing {{/if}}">{{title}}</h2>
+		</div>
+	{{/each}}
+</template>
+
+<template name="item">
+	{{#each items}}
+		<div class="entry">
+			<h2>{{title}}</h2>
+			<p>{{description}}</p>
+			{{#if gitHubURL}}
+				<a href="{{gitHubURL}}">Fork repo</a>
+			{{else}}
+				<a href="https://github.com/new">Create new GitHub repo</a>
+			{{/if}}
+			<h3> From: {{name}}<h3>
+		</div>
+
+		<div id="disqus_thread"></div>
+		<div id="disqus_loader" style="text-align: center"></div>
+	{{/each}}
+</template>
