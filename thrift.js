@@ -1,4 +1,4 @@
-var Items = new Meteor.Collection("Items");
+Items = new Meteor.Collection("Items");
 
 if (Meteor.isClient) {
 
@@ -214,29 +214,5 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function() {
-    // code to run on server at startup
-    Meteor.publish("Items", function() {
-      return Items.find({
 
-      }, {
-        sort: {
-          timestamp: -1
-        },
-        limit: 100
-      });
-    });
-
-  });
-
-  Items.allow({
-    'insert': function(userId, doc) {
-      return true;
-    },
-    'remove': function(userId, doc) {
-      if (userId == doc.userId) {
-        return true;
-      }
-    }
-  });
 }
