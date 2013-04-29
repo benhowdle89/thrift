@@ -23,8 +23,6 @@
   }
 
   header{
-    position:
-    fixed;
     top:0;
     width:100%;
     background:#33373d;
@@ -36,7 +34,7 @@
   .wrap{
     width: 600px;
     margin:20px auto;
-    padding-top:120px;
+    padding-top:24px;
   }
 
   h1{
@@ -83,8 +81,7 @@
 
   .intro {
    width: 100%;
-   position: fixed;
-   top: 90px;
+   position: relative;
 /*   height: 45px;
    line-height: 45px;*/
    background: #9ea5ae;
