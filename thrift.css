@@ -32,9 +32,12 @@
   }
 
   .wrap{
-    width: 600px;
+    max-width: 600px; /* change to max-width so it works better on narrowviewports */
     margin:20px auto;
     padding-top:24px;
+  }
+  @media (max-width: 660px) {
+    margin: 20px 12px;  /* add some margin so it's nice on narrow viewports */
   }
 
   h1{
@@ -92,6 +95,12 @@
   .intro p {
     font-size: 14px;
     margin-left: 0;
+  }
+  /* added line height for narrow viewports */
+  @media (max-width: 660px) {
+    .intro p {
+      line-height: 1.68;
+    }
   }
 
   .intro p span {
@@ -162,9 +171,14 @@
   }
 
   .content{
-    width:600px;
-    padding-bottom:200px;
+    /* removed width: 600px; as it's not needed */
+    padding-bottom:60px; /* changed pading bottom so it's not HUGE on narrow viewports */
     margin:20px auto 0 auto;
+  }
+  @media (min-width: 660px) {
+    .content {
+      padding-bottom: 200px; /* added the HUGE padding back */
+    }
   }
 
   .innerWrap {
@@ -187,6 +201,7 @@
     color: #dce5f0;
     font-size: 16px;
     padding: 6px 24px;
+    line-height: 1.7; /* nicer line height for narrow viewports */
   }
 
   .single h2 {
@@ -241,6 +256,13 @@
 
   footer p {
     font-size: 13px;
+    margin-left: 0; /* removed margins for narrow viewport */
+  }
+  
+  @media (min-width: 660px;) {
+    footer p {
+      margin-left: 40px;
+    }
   }
 
   #login-buttons-logout{
