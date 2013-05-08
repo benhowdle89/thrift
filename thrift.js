@@ -17,7 +17,7 @@ if (Meteor.isClient) {
 
   $(document).on('keyup', function(e) {
     if (e.keyCode == 27) {
-      $('.submitForm').hide();
+      $('.submitForm').slideUp();
     }
   });
 
@@ -59,7 +59,7 @@ if (Meteor.isClient) {
 
   Template.submit.events({
     'click .submitTrigger': function() {
-      $('.submitForm').toggle();
+      $('.submitForm').slideToggle();
     }
   });
 

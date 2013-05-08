@@ -1,6 +1,6 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:400,300,700">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800">
+  <script type="text/javascript" src="//use.typekit.net/lpc0tea.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>	
   <title>Thrift</title>
   <meta name="description" content="GitHub repo/idea thrift store for the open web. Lost passion for a project? Submit the GitHub repo URL. Have an idea that you'd think the community can build? Suggest it!">
 </head>
@@ -17,10 +17,6 @@
 	<p>For any feature requests or major bugs spotted - feel free to add them to the <a href="https://github.com/benhowdle89/thrift/issues">GitHub issue list</a> for this site.</p>
 
 </footer>
-
-{{#if currentUser}}
-	{{> submitForm}}
-{{/if}}
 </body>
 
 <template name="submitForm">
@@ -43,7 +39,12 @@
 
 <template name="intro">
 	<div class="intro">
-		<p><span>GitHub repo/idea thrift store for the open web.</span> Lost passion for a project? Submit the GitHub repo URL. Have an idea that you'd think the community can build? Suggest it!</p>
+		<p><span>GitHub repo/idea thrift store for the open web.</span></p>
+		{{#if currentUser}}
+			{{> submit}}
+		{{else}}
+			{{loginButtons}}
+		{{/if}}
 	</div>
 </template>
 
@@ -59,9 +60,8 @@
 		<input id="search" placeholder="Search for a repo or an idea..." />
 		<div class="menu">
 			{{#if currentUser}}
-				{{> submit}}
+				{{loginButtons}}
 			{{/if}}
-			{{loginButtons}}
 		</div>
 	</div>
 </header>
@@ -78,6 +78,7 @@
 
 <template name="submit">
 	<button class="submitTrigger">Submit</button>
+	{{> submitForm}}
 </template>
 
 <template name="items">

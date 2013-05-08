@@ -2,7 +2,7 @@
   background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wJGBYxHYxl31wAAAHpSURBVDjLpZI/aFNRFMZ/973bJqGRPopV4qNq/+SpTYnWRhCKilShg9BGcHOM+GfQoZuLk4iLgw4qZNBaHLuIdBNHl7Ta1qdNFI3SihnaNG1MpH3vuiQYQnwZvHCG893zffc751z4z6PX5T5gA1DAKnAaOAQEgAfAVeCpl+CeCrlRuEC6maO4h0A1wl4tPAHMqNUthvrDdHYY7A3t4rDVjeO6rBU2FaABM1WCrBNoi48Mi+nH9yj+KtPibAKwJXfQ5vcRG7soUnYmWEuQgAEIYBv4cGpoILI0Z4tyYYPegS6UguyijZQ6J45GSNmZHzUcJYD2ii2Ajv7efZ8WZ6ZwXFj79hXpayW4O0SL1Nl/8jzZlZ9dQLFS70pgvZKIyGD0yvu5eRmMnrk1PjI81ir1qBACTdPevXj95mVuNX8XKDQc/+T334bZZ104cvzYw2s3J3qAL5WXSsDbf61NNMBu+wOBs+VSyQ84Nfhg028ZGx3/qyy0lC7lgi7lghBitoon03lvB8l0/k7Wnk+8mny0cyXzEcfZxgwfZPTyRMHsOzAFXE9YhtNQIJnOx4FpJXT1eSkn2g0frqMoFrfoCXcqlCOAGwnLuO/l4JymcWl5uRxzXUKghBAiZ5r+WaV4lrCM555zqO+x2d0ftGmpiA/0k70AAAAASUVORK5CYII=)}
   body{
     display:block;
-    font-family:'Open Sans',sans-serif;
+    font-family: "proxima-nova", sans-serif;
     background:#f0f4f7;
     padding:0;
     margin:0 auto;
@@ -25,7 +25,7 @@
   header{
     top:0;
     width:100%;
-    background:#33373d;
+    background:#3779ec;
     height:90px;
     overflow:hidden;
     line-height:90px
@@ -35,13 +35,14 @@
     max-width: 600px; /* change to max-width so it works better on narrowviewports */
     margin:20px auto;
     padding-top:24px;
+    min-height: 300px;
   }
   @media (max-width: 660px) {
     margin: 20px 12px;  /* add some margin so it's nice on narrow viewports */
   }
 
   h1{
-    color:#dce5f0;
+    color:#d2e1fb;
     font-weight:400;
     letter-spacing:0px;
     font-size:40px;
@@ -56,15 +57,26 @@
     cursor: pointer;
   }
 
-
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
+}
 
   input,textarea,button,.login-button,.submitTrigger{
     border:0;
     border-radius:3px;
     padding:10px 20px;
-    background:#55595e;
+    background:#6698f0;
     cursor:pointer;
-    color:#dce5f0
+    color:#fff;
   }
 
   input,textarea{
@@ -87,7 +99,7 @@
    position: relative;
 /*   height: 45px;
    line-height: 45px;*/
-   background: #9ea5ae;
+   /*background: #e2ebfc;*/
    padding: 0 12px;
    text-align: center;
   }
@@ -95,6 +107,12 @@
   .intro p {
     font-size: 14px;
     margin-left: 0;
+    color: #3779ec;
+    padding-bottom: 12px;
+  }
+  .intro p:first-child {
+    padding-top: 12px;
+    padding-bottom: 0;
   }
   /* added line height for narrow viewports */
   @media (max-width: 660px) {
@@ -104,8 +122,12 @@
   }
 
   .intro p span {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 16px;
+  }
+
+  .intro #login-buttons {
+    margin-top: 12px;
   }
 
   #search {
@@ -131,28 +153,39 @@
   }
 
   .submitTrigger{
-    margin-right:12px;
-    float:left;
-    top:30px;
-    position:relative;
+    margin: auto;
+    margin-top: 12px;
     font-size:16px;
-    right:-55px
   }
 
   .submitForm{
     display:none;
-    position:absolute;
     height: 350px;
     width: 275px;
-    margin-left: -138px;
-    margin-top: -175px;
-    left: 50%;
-    top: 50%;
-    background:#33373d;
+    background:#6698f0;
     padding:24px;
     border-radius:3px;
     z-index: 10;
-    box-shadow: 0 0 0 100000px rgba(0,0,0,.7);
+    margin: auto;
+    margin-top: 24px;
+  }
+
+  .submitForm input, .submitForm textarea, .submitForm button, .submitForm .login-button, .submitForm .submitTrigger{
+    background:#d2e1fb;
+    color: #155ddb;
+  }
+
+  .submitForm ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #155ddb;
+  }
+  .submitForm :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #155ddb;
+  }
+  .submitForm ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #155ddb;
+  }
+  .submitForm :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    #155ddb;
   }
 
   #disqus_thread {
@@ -177,7 +210,7 @@
   }
   @media (min-width: 660px) {
     .content {
-      padding-bottom: 200px; /* added the HUGE padding back */
+      padding-bottom: 60px; /* added the HUGE padding back */
     }
   }
 
@@ -187,7 +220,7 @@
 
   .entry{
     display: inline-block;
-    background: #33373d;
+    background: #3779ec;
     border-radius: 3px;
     margin-top: 5px;
   }
@@ -204,6 +237,10 @@
     line-height: 1.7; /* nicer line height for narrow viewports */
   }
 
+  .entry h2:hover {
+    color: #d2e1fb;
+  }
+
   .single h2 {
     margin-bottom: 24px;
   }
@@ -218,8 +255,6 @@
 
   p{
     margin-left:40px;
-    font-weight:300px;
-    font-family:'Merriweather',serif;
     color:#33373d
   }
 
@@ -237,7 +272,6 @@
   }
 
   h5{
-    font-weight:300;
     text-align:center
   }
 
@@ -245,17 +279,16 @@
     color: inherit;
     text-decoration: underline;
   }
-  a:hover{
-    color:#46c8f3;
-  }
 
   footer{
     text-align:center;
     padding-bottom: 24px;
+    color: #75a2f2;
   }
 
   footer p {
     font-size: 13px;
+    color: #75a2f2;
     margin-left: 0; /* removed margins for narrow viewport */
   }
   
@@ -372,13 +405,6 @@
 a{
     color: inherit;
     text-decoration: underline;
-    -webkit-transition: color .5s;
-    -moz-transition: color .5s;
-    transition: color .5s;
-  }
-  a:hover{
-    text-decoration: none;
-    color:#46c8f3;
   }
 
 #search{
