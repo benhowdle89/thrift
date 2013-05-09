@@ -57,6 +57,11 @@
     cursor: pointer;
   }
 
+  .permalink.github-existing {
+    background: url('/images/octocat.png') no-repeat 6px 50%;
+    padding-left: 40px;
+  }
+
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #fff;
 }
@@ -288,6 +293,7 @@
 
   footer p {
     font-size: 13px;
+    line-height: 1.65;
     color: #75a2f2;
     margin-left: 0; /* removed margins for narrow viewport */
   }
